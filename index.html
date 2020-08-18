@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handlebars Yo</title>
+        <script src="handlebars-v4.0.11.js"></script>
+    </head>
+    <body>
+        <div id="derekData"></div>
+        <script type="text/javascript">
+        var myInfo = "<p>My name is {{name}} and I live at {{street}} in {{city}}, {{state}}</p><br/><a href=\"https://gitlab.epicready.com/Jhood/hb/blob/master/index.html\">Here is a link to my source code</a>";
+
+        var template = Handlebars.compile(myInfo);
+
+        var data = template({name: "James", street: "123 main street", city:"St Petersburg", state:"FL"});
+        document.getElementById("derekData").innerHTML += data;
+        </script>
+    </body>
+</html>
